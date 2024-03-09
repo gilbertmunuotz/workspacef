@@ -15,23 +15,23 @@ function Home() {
     return (
         <div className="Home">
             <div className='Navbar fixed w-full top-0'>
-                <div className="flex w-full justify-between items-center h-16 px-10 absolute backdrop-blur-md bg-transparent">
-                    <div className="text-lg sm:text-3xl md:text-xl text-white">Workspace Computers Limited</div>
+                <div className="flex w-full justify-between items-center h-16 px-10 absolute backdrop-blur-md bg-transparent font-bold">
+                    <div className="text-lg sm:text-3xl md:text-xl text-black">Workspace Computers Limited</div>
                     {/* NavBar By Default */}
-                    <ul className='hidden space-x-4 md:flex text-white'>
+                    <ul className='hidden space-x-4 md:block lg:flex text-black'>
                         <div className="flex space-x-2">
-                            <FaMailBulk size={20} className="text-white" />
+                            <FaMailBulk size={20} className="text-black" />
                             <h1>workspacecomputers@gmail.com</h1>
                         </div>
-                        <div className="flex space-x-2">
-                            <FaPhoneVolume size={20} className="text-white" />
+                        <div className="flex space-x-26">
+                            <FaPhoneVolume size={20} className="text-black" />
                             <h1>+255 766 598 445</h1>
                         </div>
                     </ul>
 
                     {/* FaBars icon for mobile */}
                     <div className="md:hidden z-20 text-white" onClick={handleNav}>
-                        {nav ? <FaTimes size={20} className='' /> : <FaBars size={20} className='' />}
+                        {nav ? <FaTimes size={20} className='' /> : <FaBars size={20} className='text-black' />}
                     </div>
 
                     {/* NavBar in sm Screens only */}
