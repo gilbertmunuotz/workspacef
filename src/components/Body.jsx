@@ -3,13 +3,14 @@ import Masked from '../assets/images/2248500.jpg'
 import Network from "../assets/images/network.jpg"
 import Printers from "../assets/images/printers.jpg"
 import Desktops from "../assets/images/desktops.jpg"
+import AboutImage from "../assets/images/WhoAreWe.jpg"
 
 function Body() {
     return (
         <div className="Body">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-0">
                 <section className="px-12 mx-12 my-10">
-                    <img src={Masked} alt="MaskedImage" className="rounded-l-full rounded-tr-full" />
+                    <img src={Masked} alt="MaskedImage" className="rounded-l-full rounded-tr-full md:mt-20" />
                 </section>
 
                 <div className="text-xl self-center mx-12 sm:mt-12">
@@ -20,24 +21,37 @@ function Body() {
                 </div>
             </div>
 
-
             <div className="categories">
-                <h1 className="text-center text-4xl font-bold my-7">Categories</h1>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-8 mb-8">
+                <h1 className="text-center text-4xl font-bold my-7 font-serif">Categories</h1>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-12 mb-8">
                     <div className="relative">
-                        <img src={Desktops} alt="MacBook Desktop" className="h-72" />
+                        <img src={Desktops} alt="MacBook Desktop" className="h-72 rounded-sm" />
                         <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Laptops & Desktops</p>
                     </div>
                     <div className="relative">
-                        <img src={Network} alt="Networking Switch" className="h-72" />
+                        <img src={Network} alt="Networking Switch" className="h-72 rounded-sm" />
                         <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Networking & Communications</p>
                     </div>
                     <div className="relative">
-                        <img src={Printers} alt="PrintersImage" className="h-72" />
+                        <img src={Printers} alt="PrintersImage" className="h-72 rounded-sm" />
                         <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Printers, Scanners & Photocopies</p>
                     </div>
                 </div>
             </div>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mt-16">
+                <section className="self-center mx-12">
+                    <h1 className="text-center text-3xl font-serif">Who Are We...</h1>
+                    <p>We are a group of dedicated individuals committed to providing the best. With years of experience in the industry, we strive to be the best in our field and put our customers first. Our team is passionate about building relationships with each and every one of you and creating an environment where everyone feels welcome. We work hard to ensure that your experience with us is perfect, and we are here to help you. Thank you for choosing us as your go-to provider; we look forward serving you!.</p>
+                </section>
+
+                <section className="mx-12">
+                    <div>
+                        <img src={AboutImage} alt="AboutImage" className="rounded-sm md:mt-24" />
+                    </div>
+                </section>
+            </div>
+
         </div>
     )
 }

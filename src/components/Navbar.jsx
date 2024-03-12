@@ -31,7 +31,7 @@ function Home() {
 
                     {/* FaBars icon for mobile */}
                     <div className="md:hidden z-20 text-white" onClick={handleNav}>
-                        {nav ? <FaTimes size={20} className='' /> : <FaBars size={20} className='text-black' />}
+                        {nav ? <FaTimes size={20} className='text-black' /> : <FaBars size={20} className='text-black' />}
                     </div>
 
                     {/* NavBar in sm Screens only */}
