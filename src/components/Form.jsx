@@ -33,17 +33,19 @@ function Form() {
 
                     <div className="row-start-2">
                         <label htmlFor="message">Message:</label> <br />
-                        <input
-                            className="bg-gray-200 rounded px-14 py-12 my-4"
-                            type="text"
-                            name="message"
-                            id="message"
+                        <textarea
+                            className="bg-gray-200 rounded"
+                            name="usermessage"
+                            id="usermessage"
+                            cols="38"
+                            rows="5"
+                            aria-invalid="false"
                             // onChange={(e) => setMessage(e.target.value)}
                             required
                         />
                     </div>
 
-                    <button type="submit" className="bg-blue-700 px-3 py-2 rounded-xl col-start-2">Send</button>
+                    <button type="submit" className="bg-blue-700 px-4 py-2 rounded-xl col-start-2">Send</button>
 
                 </form>
 
