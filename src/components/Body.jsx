@@ -4,6 +4,7 @@ import Network from "../assets/images/network.jpg"
 import Printers from "../assets/images/printers.jpg"
 import Desktops from "../assets/images/desktops.jpg"
 import AboutImage from "../assets/images/WhoAreWe.jpg"
+import { Link } from "react-router-dom";
 
 function Body() {
     return (
@@ -24,18 +25,29 @@ function Body() {
             <div className="categories">
                 <h1 className="text-center text-4xl font-bold my-7 font-serif">Categories</h1>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-12 mb-8">
-                    <div className="relative">
-                        <img src={Desktops} alt="MacBook Desktop" className="h-72 rounded-sm" />
-                        <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Laptops & Desktops</p>
-                    </div>
-                    <div className="relative">
-                        <img src={Network} alt="Networking Switch" className="h-72 rounded-sm" />
-                        <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Networking & Communications</p>
-                    </div>
-                    <div className="relative">
-                        <img src={Printers} alt="PrintersImage" className="h-72 rounded-sm" />
-                        <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Printers, Scanners & Photocopies</p>
-                    </div>
+
+                    <Link to={"/Category1"}>
+                        <div className="relative cursor-pointer">
+                            <img src={Desktops} alt="MacBook Desktop" className="h-72 rounded-sm" />
+                            <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Laptops & Desktops</p>
+                        </div>
+                    </Link>
+
+
+                    <Link to={"/Category2"}>
+                        <div className="relative cursor-pointer">
+                            <img src={Network} alt="Networking Switch" className="h-72 w-full rounded-sm" />
+                            <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Networking & Communications</p>
+                        </div>
+                    </Link>
+
+
+                    <Link to={"/Category3"}>
+                        <div className="relative cursor-pointer">
+                            <img src={Printers} alt="PrintersImage" className="h-72 rounded-sm" />
+                            <p className="absolute inset-x-0 bottom-0 text-center m-8 text-white text-lg">Printers, Scanners & Photocopies</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
@@ -51,7 +63,6 @@ function Body() {
                     </div>
                 </section>
             </div>
-
         </div>
     )
 }

@@ -37,7 +37,7 @@ function Form() {
                             className="bg-gray-200 rounded"
                             name="usermessage"
                             id="usermessage"
-                            cols="38"
+                            cols="49"
                             rows="5"
                             aria-invalid="false"
                             // onChange={(e) => setMessage(e.target.value)}
@@ -49,9 +49,16 @@ function Form() {
 
                 </form>
 
-                <section className="self-center text-lg mx-10">
-                    <h6>Get in touch</h6>
-                    <p>Send us a message and we'll get back to you as soon as we can.</p>
+                <section className="mx-10">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.5010817584357!2d39.23207119905056!3d-6.769324976147966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4e8481806ed9%3A0xf46d96f060c56637!2sKasimpya%20Rd%2C%20Dar%20es%20Salaam!5e0!3m2!1sen!2stz!4v1710382248494!5m2!1sen!2stz"
+                        className='sm:p-4'
+                        width="100%"
+                        height="400"
+                        title='maps'
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </section>
             </div>
         </div>
