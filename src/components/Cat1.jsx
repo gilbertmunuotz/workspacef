@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 function Cat1() {
     return (
         <div className="Cat1">
-            <Navbar />
+            {/* <Navbar /> */}
             <p className="text-base">
                 Our Listed Products are 100% Original and comes with 2 Month Warranty Period. With VAT included.
             </p>

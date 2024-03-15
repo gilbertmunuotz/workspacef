@@ -3,10 +3,11 @@ import React from 'react'
 function Form() {
     return (
         <div className="Form">
+            
             <h1 className="text-4xl text-center my-6 font-serif mt-24">Contact Us</h1>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-12">
-                <form className="mx-12">
+                <form className="mx-12 sm:ml-40">
                     <div className="row-1">
                         <label htmlFor="name">Name:</label> <br />
                         <input
@@ -34,10 +35,10 @@ function Form() {
                     <div className="row-start-2">
                         <label htmlFor="message">Message:</label> <br />
                         <textarea
-                            className="bg-gray-200 rounded"
+                            className="bg-gray-200 rounded sm:w-96"
                             name="usermessage"
                             id="usermessage"
-                            cols="49"
+                            cols="45"
                             rows="5"
                             aria-invalid="false"
                             // onChange={(e) => setMessage(e.target.value)}
