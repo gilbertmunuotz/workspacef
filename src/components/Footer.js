@@ -7,7 +7,9 @@ function Footer() {
             <div className="bg-black text-white p-16">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="mx-10">
-                        <FaInstagram size={30} className="ml-24" />
+                        <a href="http://www.instagram.com/computers_accessories_dsm" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram size={30} className="ml-24" />
+                        </a>
                         <h1>Workspace Computers Limited</h1>
                     </div>
 
