@@ -46,7 +46,7 @@ function Form() {
                         />
                     </div>
 
-                    <button type="submit" className="bg-blue-700 px-4 py-2 rounded-xl col-start-2">Send</button>
+                    <button type="submit" className="bg-blue-600 px-4 py-2 rounded-xl col-start-2">Send</button>
 
                 </form>
 
