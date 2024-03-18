@@ -1,34 +1,77 @@
-import React from 'react'
+import React, { useState, useRef } from 'react';
 
 function Form() {
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('');
+
+    const nameRef = useRef(null);
+    const messageRef = useRef(null);
+    const emailRef = useRef(null);
+
+    function HandleSubmit(event) {
+        event.preventDefault();
+
+        const url = 'http://localhost:3001/api/send';
+        const UserData = { name, message, email };
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(UserData), // Stringify data into JSON
+        };
+
+        fetch(url, requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(error => {
+                        console.error('Error sending data:', error);
+                        alert("Email already Exists");
+                    });
+                }
+                return response.json().then(data => {
+                    alert('Message sent successfully!');
+                    // Clear form fields
+                    nameRef.current.value = '';
+                    emailRef.current.value = '';
+                    messageRef.current.value = '';
+                });
+            })
+            .catch(error => {
+                console.error('Error sending data:', error);
+                alert('An error occurred. Please try again later.');
+            });
+    }
     return (
         <div className="Form">
-            
+
             <h1 className="text-4xl text-center my-6 font-serif mt-24">Contact Us</h1>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-12">
-                <form className="mx-12 sm:ml-40">
+                <form onSubmit={HandleSubmit} className="mx-12">
                     <div className="row-1">
                         <label htmlFor="name">Name:</label> <br />
                         <input
-                            className="bg-gray-200 rounded px-14 py-2 my-4"
+                            className="bg-gray-200 rounded px-10 py-2 my-4"
                             type="text"
                             name="name"
                             id="name"
-                            // onChange={(e) => setName(e.target.value)}
+                            onChange={(e) => setName(e.target.value)}
                             required
+                            ref={nameRef}
                         />
                     </div>
 
                     <div className="row-2">
                         <label htmlFor="email">Email:</label> <br />
                         <input
-                            className="bg-gray-200 rounded px-14 py-2 my-4"
+                            className="bg-gray-200 rounded px-10 py-2 my-4"
                             type="email"
                             name="email"
                             id="email"
-                            // onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
+                            ref={emailRef}
                         />
                     </div>
 
@@ -38,11 +81,12 @@ function Form() {
                             className="bg-gray-200 rounded sm:w-96"
                             name="usermessage"
                             id="usermessage"
-                            cols="45"
+                            cols="30"
                             rows="5"
                             aria-invalid="false"
-                            // onChange={(e) => setMessage(e.target.value)}
+                            onChange={(e) => setMessage(e.target.value)}
                             required
+                            ref={messageRef}
                         />
                     </div>
 

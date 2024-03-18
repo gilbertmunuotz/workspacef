@@ -35,7 +35,7 @@ function Home() {
                     </div>
 
                     {/* NavBar in sm Screens only */}
-                    <div className={`md:hidden absolute top-0 left-0 w-full backdrop-blur-sm py-32 flex flex-row text-center transition duration-300 ${nav ? "" : "translate-x-full"}`}>
+                    <div className={`md:hidden absolute top-50 left-0 w-full h-full backdrop-blur-sm py-32 flex flex-row text-center transition duration-300 ${nav ? "" : "translate-x-full"}`}>
                         <ul className="mx-auto w-full p-4 font-bold block sm:flex text-lg">
                             <li className="flex items-center text-center sm:mr-4">
                                 <FaMailBulk size={20} className="text-black mr-2" />
@@ -45,7 +45,7 @@ function Home() {
                                 <FaPhoneVolume size={20} className="text-black mr-2" />
                                 <h1>+255 766 598 445</h1>
                             </li>
-                            <h1 className="italic font-sans text-2xl animate-bounce mt-3">Welcome All</h1>
+                            <h1 className="italic font-sans text-2xl animate-bounce mt-3 sm:hidden">Welcome All</h1>
                         </ul>
                     </div>
                 </div>
