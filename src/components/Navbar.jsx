@@ -15,7 +15,7 @@ function Home() {
     return (
         <div className="Home">
             <div className='Navbar fixed w-full top-0 z-50'>
-                <div className="flex w-full justify-between items-center h-16 px-10 absolute backdrop-blur-md bg-transparent font-bold">
+                <div className="flex w-full justify-between items-center h-16 px-8 absolute backdrop-blur-md bg-transparent font-bold">
                     <div className="text-lg sm:text-3xl md:text-xl text-black">Workspace Computers Limited</div>
                     {/* NavBar By Default */}
                     <ul className='hidden space-x-4 md:block lg:flex text-black'>

@@ -30,7 +30,7 @@ function Form() {
                     });
                 }
                 return response.json().then(data => {
-                    alert('Message sent successfully!');
+                    alert('Thank You For your Contacting us. \nWe will respond to you Soon');
                     // Clear form fields
                     nameRef.current.value = '';
                     emailRef.current.value = '';
@@ -50,9 +50,10 @@ function Form() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-12">
                 <form onSubmit={HandleSubmit} className="mx-12">
                     <div className="row-1">
-                        <label htmlFor="name">Name:</label> <br />
+                        <label htmlFor="name">Name:</label>
+                        <br />
                         <input
-                            className="bg-gray-200 rounded px-10 py-2 my-4"
+                            className="bg-gray-200 rounded px-4 py-2 my-4 sm:px-6" // Added responsive padding
                             type="text"
                             name="name"
                             id="name"
@@ -63,9 +64,10 @@ function Form() {
                     </div>
 
                     <div className="row-2">
-                        <label htmlFor="email">Email:</label> <br />
+                        <label htmlFor="email">Email:</label>
+                        <br />
                         <input
-                            className="bg-gray-200 rounded px-10 py-2 my-4"
+                            className="bg-gray-200 rounded px-4 py-2 my-4 sm:px-6" // Added responsive padding
                             type="email"
                             name="email"
                             id="email"
@@ -76,9 +78,10 @@ function Form() {
                     </div>
 
                     <div className="row-start-2">
-                        <label htmlFor="message">Message:</label> <br />
+                        <label htmlFor="message">Message:</label>
+                        <br />
                         <textarea
-                            className="bg-gray-200 rounded sm:w-96"
+                            className="bg-gray-200 rounded sm:w-96" // Responsive width on small screens
                             name="usermessage"
                             id="usermessage"
                             cols="30"
@@ -91,7 +94,6 @@ function Form() {
                     </div>
 
                     <button type="submit" className="bg-blue-600 px-4 py-2 rounded-xl col-start-2">Send</button>
-
                 </form>
 
                 <section className="mx-10">
