@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from './Footer'
+import Footer from './Footer';
 import Navbar from "./Navbar";
-import Cada from "../assets/images/cardano.jpg";
 import Lii from "../assets/images/liii.png";
 import ulii from "../assets/images/ulii.png";
+import Cada from "../assets/images/cardano.jpg";
 
 function Cat1() {
     return (

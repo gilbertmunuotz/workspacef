@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Form() {
     const [name, setName] = useState('');
@@ -26,11 +28,11 @@ function Form() {
                 if (!response.ok) {
                     return response.text().then(error => {
                         console.error('Error sending data:', error);
-                        alert("Email already Exists");
+                        toast.error("Email already Exists");
                     });
                 }
                 return response.json().then(data => {
-                    alert('Thank You For your Contacting us. \nWe will respond to you Soon');
+                    toast.success('Thank You For your Contacting us. \nWe will respond to you Soon');
                     // Clear form fields
                     nameRef.current.value = '';
                     emailRef.current.value = '';
@@ -39,7 +41,7 @@ function Form() {
             })
             .catch(error => {
                 console.error('Error sending data:', error);
-                alert('An error occurred. Please try again later.');
+                toast.error('An error occurred. Please try again later.');
             });
     }
     return (
@@ -94,7 +96,20 @@ function Form() {
                     </div>
 
                     <button type="submit" className="bg-blue-600 px-4 py-2 rounded-xl col-start-2">Send</button>
+                    <ToastContainer
+                        position="top-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
                 </form>
+
 
                 <section className="mx-10">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.5010817584357!2d39.23207119905056!3d-6.769324976147966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4e8481806ed9%3A0xf46d96f060c56637!2sKasimpya%20Rd%2C%20Dar%20es%20Salaam!5e0!3m2!1sen!2stz!4v1710382248494!5m2!1sen!2stz"

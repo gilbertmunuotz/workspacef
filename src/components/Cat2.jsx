@@ -16,7 +16,7 @@ function Cat2() {
             <h1 className="text-3xl text-center my-10">Product Category</h1>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-12 mb-8">
                 <div className='relative bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer'>
-                    <img src={Fibres} alt="Pilau" className='w-full h-80' />
+                    <img src={Fibres} alt="Pilau" className='w-full h-80 bg-cover' />
                     <div className='ml-2'>
                         <span className='text-center'>
                             <h1 className="font-bold text-lg">Fibre Optic Cable</h1>
@@ -34,7 +34,7 @@ function Cat2() {
 
 
                 <div className='relative bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer'>
-                    <img src={Ethernet} alt="Pilau" className='w-full h-80' />
+                    <img src={Ethernet} alt="Pilau" className='w-full h-80 bg-cover' />
                     <div className='ml-2'>
                         <span className='text-center'>
                             <h1 className="font-bold text-lg">Fibre Optic Cable</h1>

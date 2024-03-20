@@ -11,11 +11,11 @@ const router = createBrowserRouter([
   { path: "/category2", element: <Category2 />, errorElement: <Notfound /> },
   { path: "/category3", element: <Category3 />, errorElement: <Notfound /> },
 ]);
-
 function App() {
   return (
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   );
 }
+
 
 export default App;
