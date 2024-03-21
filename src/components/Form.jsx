@@ -14,7 +14,7 @@ function Form() {
     function HandleSubmit(event) {
         event.preventDefault();
 
-        const url = 'http://localhost:3001/api/send';
+        const url = 'https://workspaceb.vercel.app/send';
         const UserData = { name, message, email };
 
         const requestOptions = {
