@@ -83,7 +83,7 @@ function Form() {
                         <label htmlFor="message">Message:</label>
                         <br />
                         <textarea
-                            className="bg-gray-200 rounded sm:w-96" // Responsive width on small screens
+                            className="bg-gray-200 rounded sm:w-80" // Responsive width on small screens
                             name="usermessage"
                             id="usermessage"
                             cols="30"
