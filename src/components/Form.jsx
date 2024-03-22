@@ -14,7 +14,7 @@ function Form() {
     function HandleSubmit(event) {
         event.preventDefault();
 
-        const url = 'https://workspaceb.vercel.app/';
+        const url = 'https://workspaceb.vercel.app';
         const UserData = { name, message, email };
 
         const requestOptions = {
