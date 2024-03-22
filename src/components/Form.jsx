@@ -21,6 +21,7 @@ function Form() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(UserData), // Stringify data into JSON
+            mode: 'no-cors'  // Add the 'no-cors' mode
         };
 
         fetch(url, requestOptions)
