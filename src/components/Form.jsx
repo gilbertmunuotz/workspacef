@@ -22,6 +22,7 @@ function Form() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(UserData), // Stringify data into JSON
+            mode: 'no-cors'
         };
 
         let errorOccurred = false; // Initialize error flag
