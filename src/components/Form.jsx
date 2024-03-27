@@ -15,7 +15,7 @@ function Form() {
         event.preventDefault();
 
         const url = 'https://workspaceb.vercel.app/api/users';
-        
+
         const UserData = { name, email, message };
 
         const requestOptions = {
@@ -24,31 +24,35 @@ function Form() {
             body: JSON.stringify(UserData), // Stringify data into JSON
         };
 
+        let errorOccurred = false; // Initialize error flag
+
         fetch(url, requestOptions)
-            // console.log(UserData)
             .then(response => {
                 if (!response.ok) {
-                    return response.text().then(error => {
+                    return response.json().then(error => {
                         console.error('Error sending data:', error);
-                        toast.error("Error sending data");
+                        toast.error(error.errors.join('\n'));
+                        errorOccurred = true; // Set error flag to true
                     });
+                } else {
+                    return response.json();
                 }
-                return response.json(); // Assuming successful JSON response
             })
             .then(data => {
                 // Handle successful response (data might be the saved user object)
                 console.log('Success:');
-                toast.success('Thank You For your Contacting us. \nWe will respond to you Soon');
-                // Clear form fields
-                nameRef.current.value = '';
-                emailRef.current.value = '';
-                messageRef.current.value = '';
+                if (!errorOccurred) { // Check if error occurred before showing success toast
+                    toast.success('Thank You For your Contacting us. \nWe will respond to you Soon');
+                    // Clear form fields
+                    nameRef.current.value = '';
+                    emailRef.current.value = '';
+                    messageRef.current.value = '';
+                }
             })
             .catch(error => {
                 console.error('Error sending data:', error);
                 toast.error('An error occurred. Please try again later.');
             });
-
     }
     return (
         <div className="Form">
