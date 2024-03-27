@@ -31,7 +31,6 @@ function Form() {
         fetch(url, requestOptions)
             .then(response => {
                 if (!response.ok) {
-                    setIsLoading(false); // Set loading to false after error
                     return response.json().then(error => {
                         if (error.error === 'Email already Exists') {
                             toast.error('Email already exists. Please use a different email.');
