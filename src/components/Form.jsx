@@ -15,7 +15,6 @@ function Form() {
         event.preventDefault();
 
         const url = 'https://workspaceb.vercel.app/api/users';
-        
         const UserData = { name, email, message };
 
         const requestOptions = {
