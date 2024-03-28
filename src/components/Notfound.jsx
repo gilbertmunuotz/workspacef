@@ -1,10 +1,12 @@
 import React from 'react';
-// import { Link } from "react-router-dom"; (Optional import if needed)
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import NoImage from '../assets/images/3793096.jpg';
 
 function Notfound() {
     return (
         <div className='Notfound'>
+            <Navbar />
             <div className="h-[100vh] overflow-hidden">
                 <div className="grid gap-6 md:grid-cols-2">
                     <div className="">
@@ -15,6 +17,7 @@ function Notfound() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
